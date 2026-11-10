@@ -111,15 +111,7 @@
 
 ---
 
-## 🛠️ Tech Stack & Integrations
 
-- **Language & Framework**: Kotlin, Android SDK 34 (Android 14), Material Design 3.
-- **Architecture**: MVVM / Offline-First Repository pattern with ViewBinding.
-- **Local Persistence**: SQLite database helper (`MindmateDatabaseHelper`) with tables for moods, chat, journals, and circle posts.
-- **Cloud Backend**: Google Firebase SDK (`firebase-auth-ktx`, `firebase-database-ktx`) via `google-services.json`.
-- **Remote APIs (Retrofit 2 + Gson + OkHttp)**:
-  - **ZenQuotes API**: Daily inspirational student affirmations with local fallback.
-  - **Open-Meteo API**: Live weather conditions and wellness tips for Pakistani university cities (Lahore, Islamabad, Karachi, Peshawar, Quetta, Faisalabad).
 
 
 
