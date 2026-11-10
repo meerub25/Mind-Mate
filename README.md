@@ -121,29 +121,9 @@
   - **ZenQuotes API**: Daily inspirational student affirmations with local fallback.
   - **Open-Meteo API**: Live weather conditions and wellness tips for Pakistani university cities (Lahore, Islamabad, Karachi, Peshawar, Quetta, Faisalabad).
 
----
 
-## 🚀 How to Build the APK
 
-### Prerequisites
-- JDK 17 or higher
-- Android SDK installed (`local.properties` configured)
 
-### Windows Command Line
-Run the automated build script:
-```cmd
-.\build-apk.bat
-```
-Or directly via the Gradle wrapper:
-```cmd
-.\gradlew.bat assembleDebug
-```
-
-The APK will be generated at:
-`app\build\outputs\apk\debug\app-debug.apk`
-
-### Install onto Device
-```cmd
 adb install -r app\build\outputs\apk\debug\app-debug.apk
 ```
 =======
