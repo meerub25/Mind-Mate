@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_forgot_password.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_forgot_password.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_mood.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_mood.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/item_mood_entry.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/item_mood_entry.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/dialog_log_mood.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/dialog_log_mood.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/item_circle_post.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/item_circle_post.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/dialog_share_circle_post.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/dialog_share_circle_post.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_home.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_more.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_more.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/item_onboarding_slide.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/item_onboarding_slide.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_insights.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_insights.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_reports.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_reports.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/item_resource_card.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/item_resource_card.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/item_chat_user.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/item_chat_user.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_login.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_resources.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_resources.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_chat.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_chat.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_support_circle.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_support_circle.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/item_chat_ai.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/item_chat_ai.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_panic_mode.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_panic_mode.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_onboarding.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_grounding.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_grounding.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_breathing.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_breathing.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_signup.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_focus_timer.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_focus_timer.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_main.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_self_care.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_self_care.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/dialog_sos_panel.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/dialog_sos_panel.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/item_journal_entry.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/item_journal_entry.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_app_lock.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_app_lock.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_profile.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/activity_splash.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.mindmate.wellness.app-mergeDebugResources-47:/layout/fragment_journal.xml",
+        "source": "com.mindmate.wellness.app-main-50:/layout/fragment_journal.xml"
+    }
+]

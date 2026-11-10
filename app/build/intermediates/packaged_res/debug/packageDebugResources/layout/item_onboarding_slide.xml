@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+    <!-- Big Center Emoji Illustration -->
+    <TextView
+        android:id="@+id/tvOnboardingEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💬"
+        android:textSize="84sp" />
+
+    <!-- Bold Heading -->
+    <TextView
+        android:id="@+id/tvOnboardingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/onboarding_slide1_title"
+        android:textColor="@color/text_primary"
+        android:textSize="24sp" />
+
+    <!-- 2 lines grey description -->
+    <TextView
+        android:id="@+id/tvOnboardingDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/onboarding_slide1_desc"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp" />
+
+    <!-- Privacy Promise (Visible on last slide) -->
+    <TextView
+        android:id="@+id/tvOnboardingPrivacyPromise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_card_mint"
+        android:fontFamily="sans-serif-bold"
+        android:paddingHorizontal="14dp"
+        android:paddingVertical="8dp"
+        android:text="@string/app_privacy_promise"
+        android:textColor="@color/pastel_mint_text"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</LinearLayout>
