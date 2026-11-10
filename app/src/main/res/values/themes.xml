@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MindEase Calm Indigo Theme -->
+    <style name="Theme.Mindmate" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/mindease_purple</item>
+        <item name="colorPrimaryVariant">@color/mindease_purple_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/sos_orange</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:statusBarColor">@color/mindease_bg</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowBackground">@color/mindease_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Material3.BottomSheet">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+    </style>
+</resources>

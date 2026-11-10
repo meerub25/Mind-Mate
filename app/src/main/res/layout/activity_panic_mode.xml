@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2E2875"
+    android:padding="28dp">
+
+    <!-- Top Exit Button -->
+    <ImageButton
+        android:id="@+id/btnExitPanicMode"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Exit Panic Mode"
+        android:src="@drawable/ic_clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/text_lavender" />
+
+    <TextView
+        android:id="@+id/tvPanicHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="You Are Safe Right Now"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnExitPanicMode" />
+
+    <TextView
+        android:id="@+id/tvPanicSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif"
+        android:text="Follow the glowing circle. Breathe slowly."
+        android:textColor="@color/text_lavender"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPanicHeading" />
+
+    <!-- Big Breathing Circle Pacer -->
+    <com.mindmate.wellness.ui.views.BreathingPacerView
+        android:id="@+id/panicPacerView"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toTopOf="@id/tvPanicPhase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPanicSub" />
+
+    <!-- Breathing Phase Label -->
+    <TextView
+        android:id="@+id/tvPanicPhase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Inhale..."
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@id/tvPanicGroundingTip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Grounding Steps -->
+    <TextView
+        android:id="@+id/tvPanicGroundingTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_card_wellness"
+        android:backgroundTint="#433B9E"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:padding="16dp"
+        android:text="🦶 Step 1: Feel your feet firmly touching the floor beneath you. You are here. You are safe."
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/btnPanicHelpline" />
+
+    <!-- 1-Tap Helpline Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPanicHelpline"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/sos_orange"
+        android:text="📞 Call 24/7 Helpline (Umang)"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:cornerRadius="27dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

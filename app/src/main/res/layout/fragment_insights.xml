@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mindease_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="90dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/insights_title"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:text="Turn daily check-ins into self-understanding"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <!-- Empty State (Shown if no data) -->
+        <LinearLayout
+            android:id="@+id/layoutEmptyInsights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌱"
+                android:textSize="54sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/insights_empty"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEmptyLogCheckin"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/mindease_purple"
+                android:text="Log a check-in"
+                android:textColor="@color/white"
+                app:cornerRadius="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInsightsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1. Mood State Wave Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/card_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="@string/insights_mood_state"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Wavy curve across the past 7 days"
+                        android:textColor="@color/text_muted"
+                        android:textSize="12sp" />
+
+                    <com.mindmate.wellness.ui.views.MoodTrendChartView
+                        android:id="@+id/insightsTrendChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="16dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 2. Stress Levels & Weekly Average -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/card_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-bold"
+                            android:text="@string/insights_stress_levels"
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tvWeeklyAvgStress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Avg: 4.8 / 10"
+                            android:textColor="@color/mindease_purple"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressStressAvg"
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="12dp"
+                        android:progress="48"
+                        app:indicatorColor="@color/mindease_purple"
+                        app:trackColor="@color/mindease_purple_light"
+                        app:trackCornerRadius="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvStressAnalysisText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Stress peaks typically before assignment deadlines and exam quizzes."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 3. Frequent Emotions Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/card_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/insights_frequent_emotions"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupEmotions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Material3.Chip.Assist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🙂 Okay (5)" />
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Material3.Chip.Assist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="✨ Great (3)" />
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Material3.Chip.Assist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😔 Low (2)" />
+
+                        <com.google.android.material.chip.Chip
+                            style="@style/Widget.Material3.Chip.Assist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😫 Overwhelmed (1)" />
+                    </com.google.android.material.chip.ChipGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 4. Common Triggers Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@color/card_white"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/insights_common_triggers"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroupTriggersInsights"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

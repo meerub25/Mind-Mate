@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mindease_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="36dp"
+    android:paddingBottom="36dp">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackFocus"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="←"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-black"
+            android:text="Focus Timer"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvFocusModeBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_mint"
+            android:fontFamily="sans-serif-bold"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"
+            android:text="Study 25m"
+            android:textColor="@color/pastel_mint_text"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8" />
+
+    <!-- Timer Ring Frame -->
+    <FrameLayout
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressFocusCircle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:indicatorColor="@color/mindease_purple"
+            app:indicatorSize="260dp"
+            app:trackColor="@color/mindease_purple_light"
+            app:trackCornerRadius="16dp"
+            app:trackThickness="14dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFocusTimeDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="25:00"
+                android:textColor="@color/text_primary"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/tvFocusSessionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Deep Work Block"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Mode Selector Pills -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSet25Min"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/mindease_purple"
+            android:fontFamily="sans-serif-bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="25m Focus"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:cornerRadius="19dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSet5MinBreak"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="@color/card_white"
+            android:fontFamily="sans-serif-bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="5m Break"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            app:cornerRadius="19dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp" />
+    </LinearLayout>
+
+    <!-- Main Controls: Start/Pause & Reset -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResetTimer"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/card_white"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="↺"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            app:cornerRadius="27dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToggleTimer"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="200dp"
+            android:layout_height="54dp"
+            android:backgroundTint="@color/mindease_purple"
+            android:fontFamily="sans-serif-bold"
+            android:text="Start Focus"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="27dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="💡 Tip: Put your phone on 'Do Not Disturb' to prevent notification anxiety."
+        android:textColor="@color/text_muted"
+        android:textSize="12sp" />
+
+</LinearLayout>

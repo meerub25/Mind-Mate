@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet_surface"
+    android:orientation="vertical"
+    android:paddingHorizontal="22dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="28dp">
+
+    <!-- Handle Bar -->
+    <View
+        android:layout_width="38dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_sheet_handle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Share Anonymously"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvCirclePostingAs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif"
+        android:text="Posting as: 🦉 Anonymous Owl • 100% anonymous"
+        android:textColor="@color/mindease_purple"
+        android:textSize="12sp" />
+
+    <!-- Topic Selector Chips -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupPostTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTopicExams"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Exams" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTopicHostel"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hostel" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTopicCareer"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Career" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTopicLoneliness"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loneliness" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTopicGeneral"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General" />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:boxBackgroundColor="@color/card_white"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxStrokeColor="@color/mindease_purple"
+        app:counterEnabled="true"
+        app:counterMaxLength="280">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCirclePostContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="top|start"
+            android:hint="What are you feeling right now? (e.g. overwhelmed by assignments, missing home...)"
+            android:inputType="textMultiLine"
+            android:maxLength="280"
+            android:minLines="4"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="sans-serif"
+        android:text="🛡️ Community rule: Kind words only. No real names or insults. Posts violating guidelines or mentioning self-harm will trigger instant support."
+        android:textColor="@color/text_muted"
+        android:textSize="11sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitCirclePost"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/mindease_purple"
+        android:fontFamily="sans-serif-bold"
+        android:text="Post Anonymously"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:cornerRadius="26dp" />
+
+</LinearLayout>

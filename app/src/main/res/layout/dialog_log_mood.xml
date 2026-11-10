@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Purple Block with VERY LARGE Emoji & Mood Name -->
+        <LinearLayout
+            android:id="@+id/layoutTopMoodHero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mindease_purple"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                android:id="@+id/tvSelectedMoodEmojiBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🙂"
+                android:textSize="76sp" />
+
+            <TextView
+                android:id="@+id/tvSelectedMoodNameBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Okay"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:text="Tap a mood below to switch"
+                android:textColor="@color/text_lavender"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Form Content in White Sheet -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="28dp">
+
+            <!-- Row of 5 Mood Buttons (Great, Okay, Meh, Low, Awful) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnMoodGreat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="✨\nGreat"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btnMoodOkay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card_wellness"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="🙂\nOkay"
+                    android:textColor="@color/mindease_purple"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btnMoodMeh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="😐\nMeh"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btnMoodLow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="😔\nLow"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/btnMoodAwful"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="😫\nAwful"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Stress Slider with number shown beside heading -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="Stress level"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvStressValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="5/10"
+                    android:textColor="@color/mindease_purple"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderStress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1.0"
+                android:value="5.0"
+                android:valueFrom="1.0"
+                android:valueTo="10.0"
+                app:thumbColor="@color/mindease_purple"
+                app:trackColorActive="@color/mindease_purple"
+                app:trackColorInactive="@color/mindease_purple_light" />
+
+            <!-- Wrapped Trigger Chips -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-bold"
+                android:text="@string/mood_triggers_heading"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupTriggers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipExams"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exams" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCareer"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Career" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipFamily"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Family" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMoney"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Money" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipLoneliness"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loneliness" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSleep"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sleep" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipHealth"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOther"
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <!-- Multi-line Note Field -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-bold"
+                android:text="Notes"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="@string/mood_notes_hint"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/mindease_purple">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etJournalNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:lines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Full-width Save Check-in Pill Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveMoodEntry"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/mindease_purple"
+                android:fontFamily="sans-serif-bold"
+                android:text="@string/mood_save_checkin"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:cornerRadius="27dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

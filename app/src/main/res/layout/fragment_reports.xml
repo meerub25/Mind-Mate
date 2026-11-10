@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/reports_title"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/reports_subtitle"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <!-- Checkin Streak Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/brand_amber_soft"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#FDE68A"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔥"
+                    android:textSize="32sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStreakCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-black"
+                        android:text="3 Days Streak"
+                        android:textColor="@color/brand_amber"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Daily emotional awareness helps prevent academic burnout."
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 7-Day Mood Trend Chart Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/bg_card"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/reports_mood_trend"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Track emotional fluctuations across the semester"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp" />
+
+                <com.mindmate.wellness.ui.views.MoodTrendChartView
+                    android:id="@+id/moodTrendChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Stress Average & Primary Triggers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <!-- Stress Index Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/reports_avg_stress"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvAvgStressScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="4.8 / 10"
+                        android:textColor="@color/brand_teal"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/tvStressStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Moderate Strain"
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Top Trigger Summary -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/stroke_subtle"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="@string/reports_top_triggers"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvTopTriggerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Exams &amp; Quizzes"
+                        android:textColor="@color/brand_emerald_dark"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvTopTriggerDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Primary factor this week"
+                        android:textColor="@color/text_muted"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- AI Emotional Pattern Insights Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/brand_purple_soft"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#E9D5FF"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="@string/reports_insight_title"
+                    android:textColor="@color/brand_purple"
+                    android:textSize="13sp"
+                    android:letterSpacing="0.05" />
+
+                <TextView
+                    android:id="@+id/tvPatternInsightText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Your entries indicate elevated stress corresponding with upcoming exam deadlines and family discussions. Taking 2 minutes of box breathing before studying helped restore focus in 70% of reported sessions."
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

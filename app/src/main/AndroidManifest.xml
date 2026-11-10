@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Network permissions for Firebase and Weather/Quotes Retrofit APIs -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Haptic feedback for breathing pacer and timer vibrations -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mindmate">
+
+        <!-- Screen 1: Splash screen is the main entry point -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Screen 2: Onboarding -->
+        <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Screen 3: Auth Screens -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.auth.SignUpActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.auth.ForgotPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Main Dashboard Container (Screens 4-8, 10-12 Hub) -->
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Self-Care Interactive Exercises -->
+        <activity
+            android:name=".ui.stress.BreathingExerciseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.stress.GroundingExerciseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Emergency Panic Mode -->
+        <activity
+            android:name=".ui.panic.PanicModeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Focus Timer (Pomodoro) -->
+        <activity
+            android:name=".ui.timer.FocusTimerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- App Lock PIN Verification & Setup -->
+        <activity
+            android:name=".ui.lock.AppLockActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

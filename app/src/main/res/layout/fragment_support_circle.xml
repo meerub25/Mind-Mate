@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mindease_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="22dp"
+            android:paddingTop="28dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/circle_title"
+                android:textColor="@color/text_primary"
+                android:textSize="26sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="sans-serif"
+                android:text="A kind, judgment-free space to share and realize you're not alone."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <!-- Topic Filter Pills -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:scrollbars="none">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupCircleFilters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filterAll"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="All" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filterExams"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Exams" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filterHostel"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hostel" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filterCareer"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Career" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/filterLoneliness"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loneliness" />
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!-- Feed List -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCirclePosts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingHorizontal="22dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="96dp" />
+
+            <!-- Empty State -->
+            <LinearLayout
+                android:id="@+id/layoutCircleEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💬"
+                    android:textSize="44sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-bold"
+                    android:text="The circle is waiting for your voice"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Be the first to share your thoughts anonymously. Every student here supports you."
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Floating Share Button -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabShareCirclePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/mindease_purple"
+        android:fontFamily="sans-serif-bold"
+        android:text="Share Anonymously"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:cornerRadius="28dp"
+        app:elevation="4dp"
+        app:icon="@drawable/ic_journal"
+        app:iconTint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

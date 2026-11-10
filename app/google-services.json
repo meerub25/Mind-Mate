@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "189216109981",
+    "project_id": "mind-ease-2d842",
+    "storage_bucket": "mind-ease-2d842.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189216109981:android:104f44ae0dff4616d3eb74",
+        "android_client_info": {
+          "package_name": "com.mindmate.wellness"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPZwcJZNV7D1xBNLS3qix_Jk7E5_DJ6to"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

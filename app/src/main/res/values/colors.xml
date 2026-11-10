@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Main Theme Colors -->
+    <color name="colorPrimary">#5B4FE0</color>
+    <color name="colorPrimaryDark">#473CBD</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- MindEase Theme Colors -->
+    <color name="mindease_purple">#5B4FE0</color>
+    <color name="mindease_purple_dark">#473CBD</color>
+    <color name="mindease_purple_light">#E0DCFA</color>
+    <color name="mindease_lavender">#C4B5FD</color>
+    <color name="text_lavender">#C4B5FD</color>
+    <color name="mindease_bg">#F8F9FE</color>
+
+    <!-- SOS Alert Color -->
+    <color name="sos_orange">#FF6B4A</color>
+
+    <!-- Brand Palette -->
+    <color name="brand_emerald">#10B981</color>
+    <color name="brand_emerald_dark">#047857</color>
+    <color name="brand_emerald_soft">#D1FAE5</color>
+    <color name="brand_teal">#14B8A6</color>
+    <color name="brand_purple">#8B5CF6</color>
+    <color name="brand_purple_soft">#EDE9FE</color>
+    <color name="brand_rose">#F43F5E</color>
+    <color name="brand_rose_soft">#FFF1F2</color>
+    <color name="brand_amber">#F59E0B</color>
+    <color name="brand_amber_soft">#FEF3C7</color>
+
+    <!-- Pastel Card Palettes -->
+    <color name="pastel_mint_bg">#E6F9F0</color>
+    <color name="pastel_mint_stroke">#A7F3D0</color>
+    <color name="pastel_mint_text">#059669</color>
+
+    <color name="pastel_peach_bg">#FFF4EE</color>
+    <color name="pastel_peach_stroke">#FED7AA</color>
+    <color name="pastel_peach_text">#EA580C</color>
+
+    <color name="pastel_pink_bg">#FDF2F8</color>
+    <color name="pastel_pink_stroke">#FBCFE8</color>
+    <color name="pastel_pink_text">#DB2777</color>
+
+    <color name="pastel_sky_bg">#EFF6FF</color>
+    <color name="pastel_sky_stroke">#BAE6FD</color>
+    <color name="pastel_sky_text">#0284C7</color>
+
+    <color name="pastel_yellow_bg">#FEFCE8</color>
+    <color name="pastel_yellow_stroke">#FEF08A</color>
+    <color name="pastel_yellow_text">#CA8A04</color>
+
+    <!-- Neutral & Semantic Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="card_white">#FFFFFF</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card_secondary">#F8FAFC</color>
+    <color name="bg_screen">#F8FAFC</color>
+    <color name="stroke_subtle">#E2E8F0</color>
+
+    <!-- Typography Colors -->
+    <color name="text_primary">#1E293B</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_muted">#94A3B8</color>
+
+    <!-- Mood Tracking Colors -->
+    <color name="mood_low">#F97316</color>
+    <color name="mood_awful">#EF4444</color>
+</resources>

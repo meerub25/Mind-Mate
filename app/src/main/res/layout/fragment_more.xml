@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mindease_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="96dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Explore MindEase"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif"
+            android:text="Self-care tools, insights, peer community &amp; settings."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <!-- 1. Emotional Insights Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMoreInsights"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/card_white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_card_mint"
+                    android:gravity="center"
+                    android:text="📊"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Emotional Insights"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="7-day mood trend, stress scores &amp; trigger patterns"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/text_muted"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 2. Personalized Self-Care Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMoreSelfCare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_card_peach"
+                    android:gravity="center"
+                    android:text="🧘"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Personalized Self-Care"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Glowing breathing orb, 5-4-3-2-1 grounding &amp; PMR"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/text_muted"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 3. Student Support Circle Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMoreCircle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_card_yellow"
+                    android:gravity="center"
+                    android:text="💬"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Student Support Circle"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Anonymous thoughts, 'Me too' peer solidarity"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/text_muted"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 4. Support Finder Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMoreFinder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_card_sky"
+                    android:gravity="center"
+                    android:text="📞"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Support Finder"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Pakistani helplines, campus centers &amp; clinics"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/text_muted"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 5. Focus Timer Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMoreFocusTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_card_mint"
+                    android:gravity="center"
+                    android:text="⏱️"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Focus Timer (Pomodoro)"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="25m study sprints with mindful check-in"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/text_muted"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 6. Profile & Settings Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMoreProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/stroke_subtle"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_card_pink"
+                    android:gravity="center"
+                    android:text="⚙️"
+                    android:textSize="22sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:text="Profile &amp; Settings"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Nickname, App Lock PIN, data wipe &amp; logout"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textColor="@color/text_muted"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
