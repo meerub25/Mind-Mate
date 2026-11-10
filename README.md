@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌿 MindEase (Mindmate Wellness)
 ### AI-Powered Mental Well-being Platform for University Students in Pakistan
 
@@ -145,3 +146,6 @@ The APK will be generated at:
 ```cmd
 adb install -r app\build\outputs\apk\debug\app-debug.apk
 ```
+=======
+# MindEase
+>>>>>>> 268036e53abbe610f1b233e455105820e468bc06
